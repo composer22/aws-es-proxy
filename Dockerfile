@@ -11,6 +11,7 @@ RUN apk upgrade --update \
   && apk add --update bash ca-certificates curl  \
   && rm -rf /var/cache/apk/* /tmp/*
 
+# aws-es-proxy-linux-amd64 renamed from aws-es-proxy-<VERSION>-linux-amd64
 ADD aws-es-proxy-linux-amd64 /usr/local/bin/aws-es-proxy
 ADD docker-entrypoint.sh /var/aws-es-proxy/docker-entrypoint.sh
 
