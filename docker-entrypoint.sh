@@ -8,5 +8,5 @@ set -eo pipefail
 # ENDPOINT = AWS Address or DNS name for Elasticsearch service.
 # VERBOSE = if set to --verbose will display detail log info
 
-exec /usr/local/bin/aws-es-proxy -endpoint ${ENDPOINT} ${VERBOSE}
+exec /usr/local/bin/aws-es-proxy -endpoint ${ENDPOINT} --listen 0.0.0.0:9200 ${VERBOSE}
 return
